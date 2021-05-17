@@ -5,6 +5,7 @@ metadata:
   attributes:
     alpha.build-context: src
     alpha.build-dockerfile: Dockerfile
+  pluginType: che-theia-vsx
 components:
   - name: buildguidance
     attributes:
@@ -24,13 +25,14 @@ components:
       endpoints:
         - name: http-3000
           targetPort: 3000
-  - preferences:
-      didact.defaultUrl: 'https://raw.githubusercontent.com/redhat-developer/vscode-didact/f1e87d6df758ff0d5f31850dc034252403a7336f/examples/test.didact.yaml'
-      che.welcome.enable: false
-      didact.openDefaultTutorialAtStartup: true
-    type: chePlugin
-    reference: 'https://gist.githubusercontent.com/bfitzpat/be6b83debc7026d5ccf92302fe5c3bac/raw/ea71bec2d0a4562d7a755d447208b5635fd5053a/meta.yaml'
-    alias: didact-plugin
+  - name: didact-plugin
+    plugin:
+      reference: https://gist.githubusercontent.com/jschuler/27b3a774051967bd8869a60a9e9b9884/raw/4e0cbd49e0a7f233d671dc1db6a1742d25e7fdc2/meta.yaml
+      preferences:
+        didact.defaultUrl: 'https://raw.githubusercontent.com/redhat-developer/vscode-didact/f1e87d6df758ff0d5f31850dc034252403a7336f/examples/test.didact.yaml'
+        che.welcome.enable: false
+        didact.openDefaultTutorialAtStartup: true
+      type: chePlugin
 commands:
   - id: install
     exec:
