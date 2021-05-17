@@ -28,11 +28,6 @@ components:
   - name: didact-plugin
     plugin:
       reference: https://gist.githubusercontent.com/jschuler/27b3a774051967bd8869a60a9e9b9884/raw/4e0cbd49e0a7f233d671dc1db6a1742d25e7fdc2/meta.yaml
-      preferences:
-        didact.defaultUrl: 'https://raw.githubusercontent.com/redhat-developer/vscode-didact/f1e87d6df758ff0d5f31850dc034252403a7336f/examples/test.didact.yaml'
-        che.welcome.enable: false
-        didact.openDefaultTutorialAtStartup: true
-      type: chePlugin
 commands:
   - id: install
     exec:
