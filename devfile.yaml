@@ -27,7 +27,7 @@ components:
           targetPort: 3000
   - name: didact-plugin
     plugin:
-      reference: https://gist.githubusercontent.com/jschuler/27b3a774051967bd8869a60a9e9b9884/raw/4e0cbd49e0a7f233d671dc1db6a1742d25e7fdc2/meta.yaml
+      uri: https://gist.githubusercontent.com/jschuler/27b3a774051967bd8869a60a9e9b9884/raw/4e0cbd49e0a7f233d671dc1db6a1742d25e7fdc2/meta.yaml
 commands:
   - id: install
     exec:
